@@ -1,0 +1,28 @@
+Description:
+This proposed framework relies on multiple GAN models to impute missing values for mixed-type tabular data. Researchers can simply input their raw data 
+including missing values, and receive as output a complete data set without missing values. This data set can then be used for further data analysis.
+Do note that the input data must contain a set of complete rows for training.
+
+Manual:
+1) clone the github repository (!git clone https://github.com/qahtanaa/ADS_Theses_Projects_2022/tree/main/Ouassim)
+2) import the 'data_imputation_completer' using: 'from tabularGAIN import data_imputation_completer'
+3) Complete your data set using: data_imputation_completer(rawData, nr_epoch, distinct_ratio_threshold, generator_lr, discriminator_lr, verbose)
+  - Default values are: nr_epoch = 300, distinct_ratio_threshold = 0.1, generator_lr = 0.0002, discriminator_lr = 0.0002, verbose = False
+
+
+
+Prerequisite libraries:
+Note that functions might be deprecated under different library versions, the proposed framework has been tested under:
+rdt     (version 0.6.4)
+sdv     (version 0.15.0)
+pandas  (version 1.3.5)
+numpy   (version 1.21.6)
+sklearn (version 1.0.2)
+scipy   (version 1.7.3)
+
+Data sets are publicly available:
+Adult Income data: https://archive.ics.uci.edu/ml/datasets/adult
+Compas Recidivism: https://github.com/propublica/compas-analysis/blob/master/compas-scores-two-years.csv
+German Credit: https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
+
+The research paper can be found in this same github repository in pdf format.
